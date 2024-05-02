@@ -1,6 +1,6 @@
-import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, BeforeUpdate, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity()
+@Entity({name: 'products'})
 export class Product {
 
     @PrimaryGeneratedColumn('uuid')
@@ -44,6 +44,22 @@ export class Product {
     @BeforeInsert() 
     checkSlugInsert(){
         if( !this.slug ) {
+            this.slug = this.title;  
+        }
+
+        this.slug = this.slug
+            .toLowerCase()
+            .replaceAll(' ', '_')
+            .replaceAll("'",'')
+    }
+
+
+
+
+    //Procediemiento antes de actualizar 
+    @BeforeUpdate() 
+    checkSlugUpdate() {       
+        if( this.title ) {
             this.slug = this.title;  
         }
 
