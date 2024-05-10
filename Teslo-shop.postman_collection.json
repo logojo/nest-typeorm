@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "ffa1df61-9a99-496d-86ed-cceffb6e038e",
+		"name": "Teslo-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18145991"
+	},
+	"item": [
+		{
+			"name": "GetAllProducst",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZTM4Y2MxLTQ5NWItNDg4MC04NDFlLTA5ZDdhNTQxM2Y4OCIsImVtYWlsIjoiam9lbEBtYWlsLmNvbSIsImlhdCI6MTcxNTM1NjQ2OCwiZXhwIjoxNzE1MzYwMDY4fQ.QNDJOBdZ9SecORl1xj9KGr4OBFYMb0j2tlMA_iSOx_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"joel@mail.com\",\r\n    \"password\":\"1234Qwer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Catherine@mail.com\",\r\n    \"password\":\"1234Qwer\",\r\n    \"fullname\":\"Catherine Flores Gutierrez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZTM4Y2MxLTQ5NWItNDg4MC04NDFlLTA5ZDdhNTQxM2Y4OCIsImVtYWlsIjoiam9lbEBtYWlsLmNvbSIsImlhdCI6MTcxNTM1NjE5MSwiZXhwIjoxNzE1MzU5NzkxfQ.7LXJ4Po232YpnRWVA8SlqN3Zll7SAH3vqmPtslaYzd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/auth/refresh",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZTM4Y2MxLTQ5NWItNDg4MC04NDFlLTA5ZDdhNTQxM2Y4OCIsImVtYWlsIjoiam9lbEBtYWlsLmNvbSIsImlhdCI6MTcxNTM1NjQ2OCwiZXhwIjoxNzE1MzYwMDY4fQ.QNDJOBdZ9SecORl1xj9KGr4OBFYMb0j2tlMA_iSOx_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Men's Turbine Long Sleeve Tee 2\",\r\n    \"description\":\"Introducing the Tesla Turbine Collection. Designed for style, comfort and everyday lifestyle, the Men's Turbine Long Sleeve Tee features a subtle, water-based T logo on the left chest and our Tesla wordmark below the back collar. The lightweight material is double-dyed, creating a soft, casual style for ideal wear in any season. Made from 50% cotton and 50% polyester.\",\r\n    \"sizes\":[\"XS\",\"SM\",\"M\",\"G\"],\r\n    \"gender\":\"men\",\r\n    \"tags\":[\"shirt\"],\r\n    \"images\":[\"1740176-00-A_0_2000.jpg\",\"1740176-00-A_1.jpg\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZTM4Y2MxLTQ5NWItNDg4MC04NDFlLTA5ZDdhNTQxM2Y4OCIsImVtYWlsIjoiam9lbEBtYWlsLmNvbSIsImlhdCI6MTcxNTM1NjQ2OCwiZXhwIjoxNzE1MzYwMDY4fQ.QNDJOBdZ9SecORl1xj9KGr4OBFYMb0j2tlMA_iSOx_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/products/5197abc8-7f49-48d1-8ff5-315844d1fd60",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"5197abc8-7f49-48d1-8ff5-315844d1fd60"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZTM4Y2MxLTQ5NWItNDg4MC04NDFlLTA5ZDdhNTQxM2Y4OCIsImVtYWlsIjoiam9lbEBtYWlsLmNvbSIsImlhdCI6MTcxNTM1NjQ2OCwiZXhwIjoxNzE1MzYwMDY4fQ.QNDJOBdZ9SecORl1xj9KGr4OBFYMb0j2tlMA_iSOx_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sizes\":[\"XS\",\"SM\",\"M\",\"L\",\"XL\"],\r\n    \"tags\":[\"shirt\",\"men\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/5197abc8-7f49-48d1-8ff5-315844d1fd60",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"5197abc8-7f49-48d1-8ff5-315844d1fd60"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZTM4Y2MxLTQ5NWItNDg4MC04NDFlLTA5ZDdhNTQxM2Y4OCIsImVtYWlsIjoiam9lbEBtYWlsLmNvbSIsImlhdCI6MTcxNTM1NjQ2OCwiZXhwIjoxNzE1MzYwMDY4fQ.QNDJOBdZ9SecORl1xj9KGr4OBFYMb0j2tlMA_iSOx_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/products/5197abc8-7f49-48d1-8ff5-315844d1fd60",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"5197abc8-7f49-48d1-8ff5-315844d1fd60"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

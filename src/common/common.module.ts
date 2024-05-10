@@ -1,4 +1,8 @@
 import { Module } from '@nestjs/common';
+import { CommonHelpers } from './helpers/helpers';
 
-@Module({})
+@Module({
+    providers: [CommonHelpers],
+    exports:[ CommonHelpers ]
+})
 export class CommonModule {}

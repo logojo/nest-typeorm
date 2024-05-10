@@ -3,6 +3,10 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductsModule } from './products/products.module';
 import { CommonModule } from './common/common.module';
+import { SeedModule } from './seed/seed.module';
+import { FilesModule } from './files/files.module';
+import { AuthModule } from './auth/auth.module';
+import { MessagesWsModule } from './messages-ws/messages-ws.module';
 
 
 @Module({
@@ -19,7 +23,11 @@ import { CommonModule } from './common/common.module';
       synchronize      : true // cuando se genera un cambio en las entidades automaticamente las sincroniza con la db
     }),
     ProductsModule,
-    CommonModule
+    CommonModule,
+    SeedModule,
+    FilesModule,
+    AuthModule,
+    MessagesWsModule
   ],
 })
 export class AppModule {}

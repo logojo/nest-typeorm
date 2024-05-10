@@ -12,3 +12,9 @@
 ```
 docker composer up -d
 ```
+
+5. llenar la base de datos
+
+```
+http://localhost:3000/api/seed
+```
